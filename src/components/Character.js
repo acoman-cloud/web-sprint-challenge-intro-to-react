@@ -3,24 +3,35 @@ import react from "react";
 import styled from "styled-components";
 
 const StyledBody =styled.div`
-	border: 10px solid ${pr=>pr.theme.primaryColor};
-	width: 50%;
+	border: 6px solid ${pr=>pr.theme.primaryColor};
+	width: 90%;
+	height: 70%;
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	align-items: center;
 `
 
 const StyledDiv = styled.div`
-		background-color: ${pr=>pr.theme.primaryColor};
-		color: white;
+		display:flex;
+		align-items: center;
+		background-color: ${pr=>pr.theme.tertiaryColor};
+		border: 4px solid ${pr=>pr.theme.primaryColor};
+		color: ${pr=>pr.theme.white};
+		width: 25%;
+		height: 5em;
+		flex-direction: column;
+		justify-content: center;
 `
 
-const Character = ({character}) => {
+const Character = ({character, url, open}) => {
 	
 	return (
 		<StyledBody>
-		{character.map(id=>{
-			return <StyledDiv><p>{id.name}</p></StyledDiv>
+		{character.map(ch=>{
+			return <StyledDiv><p>{ch.name}</p><button onClick={()=> {
+				url(ch.url);
+				open(true);
+				}}>INFO</button></StyledDiv>
 		})}
 		</StyledBody>
 	)
