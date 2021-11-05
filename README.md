@@ -79,6 +79,16 @@ After finishing your required elements, you can push your work further. These go
 Be prepared to demonstrate your understanding of this week's concepts by answering questions on the following topics. Put your answers underneath the questions:
 
 1. What is React JS and what problems does it solve? Support your answer with concepts introduced in class and from your personal research on the web.
+  
+  React JS is a shorthand version of DOM manipulation that is offloaded onto React. It makes it faster to get a completed project, and makes it easier to debug.
 1. Describe component state.
+
+  A state is something that is built while the user is interacting with your website and can interact on multiple dimensions and routes with the user.
+
 1. Describe props.
+
+  Props are the passing of information from a state to a component, or another state.
+
 1. What are side effects, and how do you sync effects in a React component to changes of certain state or props?
+
+  UseEffect is a side effect that is very flexible when it runs and I can set it up in anyway that you desire for me to set up a website or interface.
