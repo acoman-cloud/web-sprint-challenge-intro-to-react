@@ -19,7 +19,7 @@ const App = () => {
   // side effect in a component, you want to think about which state and/or props it should
   // sync up with, if any.
   const [character, setCharacter] = useState([])
-  const [id, setId] = useState()
+  const [id, setId] = useState('https://swapi.dev/api/people/2/')
   const [open, setOpen] = useState(null)
 
   const url = id => {

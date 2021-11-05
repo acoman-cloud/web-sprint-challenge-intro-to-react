@@ -12,34 +12,34 @@ const StyledDiv = styled.div`
 `
 
 const Info = ({character, id}) => {
-	const [state, setState] = useState(null)
+
 	const info = [];
 
 	useEffect(()=>{
 		axios.get(id)
 			.then(esp => {
 				info.push(esp.data);
-				console.log(info)
+				console.log(info[0].name)
 			})
 			.catch(err => console.error(err))
-	}, [id])
+	})
 
 	return (
 		<StyledDiv>
-			{
-				state &&
-				<>
-					<h2> The sweet deets of {info.name}: </h2>
+			
+				
+					<h2> The sweet deets of {info[0]}: </h2>
 					<p>height: {info} cm</p>
 					<p>weight: {info} kg</p>
 					<p>skin color: {info}</p>
 					<p>gender: {info}</p>
 					<h3>Appeared in Hollywood blockbusters, such as: </h3>
 					<ul>
+
 					</ul>
-					<button onClick={setState(null)}>Close</button>
-				</>
-			}
+					<button>Close</button>
+				
+			
 		</StyledDiv>
 	)
 }
